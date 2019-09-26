@@ -15,6 +15,7 @@ RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-di
 COPY ./conf/default.conf /etc/apache2/sites-enabled/000-default.conf
 
 WORKDIR /var/www/app
+RUN chmod -R 777 /var/www/.
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
