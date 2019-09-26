@@ -9,6 +9,8 @@ services:
       - 9004:80
     volumes:
       - ./laravel_web:/var/www/app
+    working_dir: /var/www/app
+    command: chmod -R 777 /var/www/storage
     depends_on:
       - db
   db:
