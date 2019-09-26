@@ -10,7 +10,7 @@ services:
     volumes:
       - ./laravel_web:/var/www/app
     working_dir: /var/www/app
-    command: chmod -R 777 /var/www/storage
+    command: chmod -R 777 /var/www/app/storage
     depends_on:
       - db
   db:
